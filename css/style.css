@@ -24,6 +24,7 @@ body, html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /* Modal Content */
 }
 
 .root .form1 {
@@ -98,28 +99,44 @@ body, html {
   color: black;
 }
 
-.root .menu {
+.root .viwe {
   margin-left: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: #F6F6F6;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.root .menu .navleft {
+.root .viwe .menu {
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #F6F6F6;
+}
+
+.root .viwe .menu .navleft {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   background-color: #2D89E6;
-  width: 749px;
+  width: 70%;
   height: 45px;
   margin-top: 40px;
-  margin-left: 38px;
+  margin-left: -19px;
   border: none;
   border-radius: 0px 25px 25px 0px;
 }
 
-.root .menu .navleft h1 {
+.root .viwe .menu .navleft h1 {
   color: #FFFFFF;
   font-family: sans-serif;
   font-size: 13px;
@@ -127,7 +144,7 @@ body, html {
   padding-top: 9PX;
 }
 
-.root .menu .navleft .item {
+.root .viwe .menu .navleft .item {
   width: 50px;
   margin-left: 10px;
   margin-top: 14px;
@@ -135,7 +152,7 @@ body, html {
   border-radius: 15%;
 }
 
-.root .menu .navleft .item1 {
+.root .viwe .menu .navleft .item1 {
   width: 81px;
   margin-left: 10px;
   margin-top: 14px;
@@ -143,12 +160,12 @@ body, html {
   border-radius: 6px 6px 6px 6px;
 }
 
-.root .menu .navleft .bord {
+.root .viwe .menu .navleft .bord {
   border: 1px solid #FFFFFF;
   margin-left: 10px;
 }
 
-.root .menu .navleft input {
+.root .viwe .menu .navleft input {
   width: 186px;
   height: 21px;
   border: none;
@@ -157,7 +174,7 @@ body, html {
   margin-top: 14px;
 }
 
-.root .menu .navright {
+.root .viwe .menu .navright {
   height: 45px;
   margin-top: 40px;
   background-color: #2D89E6;
@@ -166,11 +183,160 @@ body, html {
   border-radius: 25px 0px 0px 25px;
 }
 
-.root .menu .navright h1 {
+.root .viwe .menu .navright h1 {
   color: #FFFFFF;
   font-family: sans-serif;
   font-size: 13px;
   text-align: center;
   padding-top: 9PX;
+}
+
+.root .viwe .subview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.root .viwe .subview .delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.root .viwe .subview .delete button {
+  background-color: red;
+  border: none;
+  border-radius: 50px;
+  width: 70%;
+  height: 40px;
+  color: #FFFFFF;
+  font-size: 30px;
+  cursor: pointer;
+  margin-left: 18px;
+  margin-top: 80px;
+}
+
+.root .viwe .subview .detiles {
+  margin-left: 20px;
+  margin-top: 30px;
+}
+
+.root .viwe .subview p {
+  color: #C3C3C3;
+  overflow: hidden;
+  height: 48px;
+  margin: 10px;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.root .viwe .subview h4 {
+  color: #2D89E6;
+  margin: 10px;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.root .viwe .subview h3 {
+  margin: 10px;
+  font-size: 22px;
+  font-family: sans-serif;
+}
+
+.root .modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.root .modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.root .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.root .close:hover,
+.root .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.root .modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.root .modal h1 {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 78px;
+}
+
+.root .minidetiels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.root .minidetiels input {
+  width: 111px;
+  font-family: sans-serif;
+  border: none;
+  color: #2D89E6;
+}
+
+.root .minidetiels h4 {
+  margin-left: 10px;
+  width: 15px;
+  color: #2D89E6;
+}
+
+.root .minidetiels select {
+  color: #2D89E6;
+  margin-top: 20px;
+  height: 21px;
+  border-radius: 5px 5px 5px 5px;
 }
 /*# sourceMappingURL=style.css.map */
