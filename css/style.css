@@ -1,5 +1,6 @@
 body, html {
   height: 100%;
+  overflow: hidden;
 }
 
 .header {
@@ -24,7 +25,6 @@ body, html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* Modal Content */
 }
 
 .root .form1 {
@@ -100,7 +100,9 @@ body, html {
 }
 
 .root .viwe {
-  margin-left: 20px;
+  overflow: auto;
+  width: 60%;
+  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -214,7 +216,7 @@ body, html {
   background-color: red;
   border: none;
   border-radius: 50px;
-  width: 70%;
+  width: 40PX;
   height: 40px;
   color: #FFFFFF;
   font-size: 30px;
@@ -274,24 +276,96 @@ body, html {
 }
 
 .root .modal-content {
+  position: relative;
+  border-radius: 50px 50px 50px 50px;
   background-color: #fefefe;
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 70%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.root .modal-content p {
+  position: absolute;
+  top: 380px;
+  font-family: sans-serif;
+  text-align: center;
+  width: 965px;
+  color: #C3C3C3;
+  font-size: 14px;
+}
+
+.root .modal-content .btns {
+  margin-top: 200px;
+}
+
+.root .modal-content .btns .delete {
+  background-color: #FF4A4A;
+  border: none;
+  width: 194px;
+  height: 55px;
+  font-family: sans-serif;
+  color: #FFFFFF;
+}
+
+.root .modal-content .btns .save_btn {
+  background-color: #2D89E6;
+  border: none;
+  width: 194px;
+  height: 55px;
+  font-family: sans-serif;
+  color: #FFFFFF;
+}
+
+.root .modal-content .btns .cancel {
+  background-color: #484848;
+  border: none;
+  width: 194px;
+  height: 55px;
+  font-family: sans-serif;
+  color: #FFFFFF;
 }
 
 .root .close {
-  color: #aaaaaa;
+  border-radius: 50px 50px 50px 50px;
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  top: -7px;
+  left: -4px;
+  position: absolute;
+  color: #FFFFFF;
   float: right;
   font-size: 28px;
   font-weight: bold;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .root .close:hover,
 .root .close:focus {
-  color: #000;
-  text-decoration: none;
   cursor: pointer;
 }
 
