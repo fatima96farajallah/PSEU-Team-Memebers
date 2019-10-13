@@ -112,6 +112,7 @@ body, html {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: calc(100% - 76px);
 }
 
 .root .viwe .menu {
@@ -194,6 +195,7 @@ body, html {
 }
 
 .root .viwe .subview {
+  padding-bottom: 21px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -370,9 +372,7 @@ body, html {
 }
 
 .root .modal {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;

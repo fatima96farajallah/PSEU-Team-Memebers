@@ -112,7 +112,7 @@ overflow: hidden;
             background-color: color(backgrond-color);
             display: flex;
             flex-direction: column;
-       
+            height: calc(100% - 76px);
      .menu {
          margin-left: 20px;
          display: flex;
@@ -184,6 +184,7 @@ overflow: hidden;
      }
 
      .subview {
+        padding-bottom: 21px;
         display: flex;
         flex-direction: row;
         .delete {
@@ -324,7 +325,7 @@ overflow: hidden;
     cursor: pointer;
   }
   .modal {
-      display: flex;
+      display: none;
       flex-direction: column;
       h1 {
           text-align: center;
