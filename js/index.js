@@ -73,9 +73,13 @@ console.log(members);
  }
 
 function isEmailExist(email) {
-  members.find(member =>(member.email == document.getElementById("email").value));
-}
-
-
-
+  if(members.find(member => (member.email == document.getElementById("email").value)) !=undefined)
+  {
+  alart("email error");
+  }
+  else {
+    saveData();
+  }
+  }
+  
  
