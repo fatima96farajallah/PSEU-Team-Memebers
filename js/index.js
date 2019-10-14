@@ -37,9 +37,9 @@ console.log(members);
   let email=document.getElementById("email").value;
   let major=document.getElementById("major").value;
   let role=document.getElementById("role").value;
-  let biography=document.getElementById("bio").value;
+  let bio=document.getElementById("bio").value;
   let time=Date.time;
-  let item = new member(firstName , email , major , role , biography , time);
+  let item = new member(firstName , email , major , role , bio , time);
   members.push(item);
   console.log(Date.time);
   localStorage.setItem('memberList',JSON.stringify(members));
@@ -47,26 +47,23 @@ console.log(members);
   show(members);
  }
 
- function HTMLMember(name, email, major, role, biography) {
+ function HTMLMember(firstName, email, major, role, bio) {
   return `<div class="subview">
-            <div class="delete" <button class=""> - </button>></div>
+            <div class="delete" <button class=""> - </button></div>
             <div class="content" onclick="memberClicked()">
                 <div class="detiles">
-                    <h3 id="myBtn">${name}</h3>
+                    <h3 id="myBtn">${firstName}</h3>
                     <h4> ${email} / ${major} / ${role} </h4>
                 </div>
-                <p> ${biography} </p>
+                <p> ${bio} </p>
                 </div>
             </div>
           </div>`;
 }
 
  function show(membersview){  
-  document.getElementById("memberList").innerHTML = "";
-  membersview.array.forEach(element => {
-
-    
+  membersview.forEach((members) => {
+    let memberDiv = HTMLMember(members.firstName, members.email, members.major, members.role,members.bio);
+    document.getElementById("members").innerHTML += memberDiv;     
   });
-
-
  }
