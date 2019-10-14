@@ -5,9 +5,7 @@ let h3 = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];
 // When the user clicks the button, open the modal 
-h3.onclick = function() {
-  modal.style.display = "flex";
-}
+
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
   modal.style.display = "none";
@@ -19,20 +17,20 @@ window.onclick = function(event) {
   }
 }
 class member {
-  constructor(firstName , email , major , role , biography , time){
+  constructor(firstName , email , major , role , bio , time){
     this.firstName=firstName;
     this.email=email;
     this.major=major;
     this.role=role;
-    this.biography=biography;
+    this.bio=bio;
     this.time=time;
   }
 }
 
 let members = [];
 console.log(members);
-
  function saveData() {
+
   let firstName=document.getElementById("firstName").value;
   let email=document.getElementById("email").value;
   let major=document.getElementById("major").value;
@@ -46,11 +44,9 @@ console.log(members);
   members =JSON.parse(localStorage.getItem('memberList')); 
   show(members);
  }
-
  function HTMLMember(firstName, email, major, role, bio) {
   return `<div class="subview">
-            <div class="delete" <button class=""> - </button></div>
-            <div class="content" onclick="memberClicked()">
+            <div class="delete"> <button onclick="deletemember()" ('${email}' id="deleteBtn" )>-</button></div>
                 <div class="detiles">
                     <h3 id="myBtn">${firstName}</h3>
                     <h4> ${email} / ${major} / ${role} </h4>
@@ -60,10 +56,26 @@ console.log(members);
             </div>
           </div>`;
 }
-
  function show(membersview){  
+  document.getElementById("members").innerHTML =" ";
   membersview.forEach((members) => {
-    let memberDiv = HTMLMember(members.firstName, members.email, members.major, members.role,members.bio);
+    const memberDiv = HTMLMember(members.firstName, members.email, members.major, members.role,members.bio);
     document.getElementById("members").innerHTML += memberDiv;     
   });
+  
  }
+ function deletemember(){
+  members.splice((member) => { 
+    member.email !== email;
+  },1);
+  localStorage.setItem('memberList',JSON.stringify(members));
+  show(members);
+ }
+
+function isEmailExist(email) {
+  members.find(member =>(member.email == document.getElementById("email").value));
+}
+
+
+
+ 
