@@ -15,35 +15,35 @@
             <h3>
                Add new member 
             </h3>
-            <input class="styleinput" type="text" name="FirstName" placeholder="FirstName">
-            <input class="styleinput" type="text" name="Email" placeholder="Email">
-            <select class="styleinput">
+            <input id="firstName" class="styleinput" type="text" name="FirstName" placeholder="FirstName">
+            <input id="email" class="styleinput" type="text" name="Email" placeholder="Email">
+            <select id="major" class="styleinput">
                <option selected disabledv>Major</option>
-               <option value="Information Technology">Information Technology</option>
+               <option  value="Information Technology">Information Technology</option>
                <option value="Computer Engineering ">Computer Engineering </option>
                <option value="Computer Science ">Computer Science </option>
                <option value="Information System ">Information System </option>
             </select>
-            <select class="styleinput">
+            <select id="role" class="styleinput">
                <option selected disabled> Role</option>
                <option value="Front-End Developer">Front-End Developer</option>
                <option value="Back-End Developer  ">Back-End Developer </option>
                <option value="Full-Stack Developer  ">Full-Stack Developer  </option>
             </select>
-            <textarea class="styleinput" >  Biography
+            <textarea id="bio" class="styleinput" >  Biography
                     </textarea>
             <div class="subform">
-               <input type="checkbox" > 
+               <input id="checkbox" type="checkbox" > 
                <label>Add to bottom / or at index </label>  
-               <input class="num" type="number">
+               <input id="num" class="num" type="number">
             </div>
-            <button class="save">Save</button>
+            <button onclick="saveData()" id="saveBtn" class="save" type="button">Save</button>
          </form>
          <div class="viwe">
             <div class="menu">
                <div class="navleft">
                   <h1> SORT BY </h1>
-                  <select class="item">
+                  <select id="sort" class="item">
                      <option value="A-Z">A-Z</option>
                      <option value="Z-A">Z-A </option>
                      <option value="Newest">Newest </option>
@@ -51,14 +51,14 @@
                   </select>
                   <div class="bord">
                   </div>
-                  <select class="item1">
+                  <select id="submajor" class="item1">
                      <option selected disabledv>Major</option>
                      <option value="Information Technology">Information Technology</option>
                      <option value="Computer Engineering ">Computer Engineering </option>
                      <option value="Computer Science ">Computer Science </option>
                      <option value="Information System ">Information System </option>
                   </select>
-                  <select class="item1">
+                  <select id="subrole" class="item1">
                      <option selected disabled> Role</option>
                      <option value="Front-End Developer">Front-End Developer</option>
                      <option value="Back-End Developer  ">Back-End Developer </option>
@@ -66,7 +66,7 @@
                   </select>
                   <div class="bord">
                   </div>
-                  <input class="searchinput"  type="search" name="search" placeholder=" search by name ...">
+                  <input id="search" class="searchinput"  type="search" name="search" placeholder=" search by name ...">
                </div>
                <div class="navright">
                   <h1> 15 ITEMS </h1>
@@ -75,7 +75,7 @@
             <div class="members">
                <div class="subview">
                <div class="delete"> 
-                  <button > - </button>
+                  <button id="deleteBtn" > - </button>
                </div>
                <div class="detiles">
                   <h3 id="myBtn"> Faris Abu4ram </h3>
@@ -140,27 +140,27 @@
                <span class="close">&times;</span>
                <h1> Faris Abu3ram </h1>
                <div class="minidetiels">
-                  <input  type="text" name="faris@pseu.com" value="faris@pseu.com">
+                  <input id="subemail"  type="text" name="faris@pseu.com" value="faris@pseu.com">
                   <h4> / </h4>
-                  <select>
+                  <select id="editmajor">
                      <option value="Information Technology">Information Technology</option>
                      <option value="Computer Engineering ">Computer Engineering </option>
                      <option value="Computer Science ">Computer Science </option>
                      <option value="Information System ">Information System </option>
                   </select>
                   <h4> / </h4>
-                  <select>
+                  <select id="editrole">
                      <option value="Front-End Developer">Front-End Developer</option>
                      <option value="Back-End Developer  ">Back-End Developer </option>
                      <option value="Full-Stack Developer  ">Full-Stack Developer  </option>
                   </select>
                </div>
-               <P> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+               <P id="edit"> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
                </P>
                <div class="btns">
-                  <button class="delete" > DELETE </button>
-                  <button class="save_btn" > SAVE </button>
-                  <button class="cancel" > CANCEL </button>
+                  <button id="subdelete" class="delete" > DELETE </button>
+                  <button id="subsave" class="save_btn" > SAVE </button>
+                  <button id="cancel" class="cancel" > CANCEL </button>
                </div>
             </div>
          </div>
