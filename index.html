@@ -37,13 +37,15 @@
                <label>Add to bottom / or at index </label>  
                <input id="num" class="num" type="number">
             </div>
-            <button onclick="isEmailExist()" id="saveBtn" class="save" type="button">Save</button>
+            <p id="required"> All fields are required</p>
+            <button onclick="saveData()" id="saveBtn" class="save" type="button">Save</button>
          </form>
          <div class="viwe">
             <div class="menu">
                <div class="navleft">
                   <h1> SORT BY </h1>
-                  <select id="sort" class="item">
+                  <select id="sort" onchange="sortBy()" class="item">
+                     <option value="">Sort</option>
                      <option value="A-Z">A-Z</option>
                      <option value="Z-A">Z-A </option>
                      <option value="Newest">Newest </option>

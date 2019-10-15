@@ -54,7 +54,11 @@ overflow: hidden;
         display: flex;
         flex-direction: column;
         position: relative;
-
+     p {
+        display: none;
+        color: red;
+        text-align: center;
+          }
         .styleinput {
             border:dotted 1px color(border-color);
             border-radius: 10px;
